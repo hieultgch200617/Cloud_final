@@ -8,6 +8,10 @@ const ProductSchema = mongoose.Schema(
         category: {
             type: mongoose.Schema.Types.ObjectId,
             ref: 'categories'
+        },
+        supplier: {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: 'suppliers'
         }
     }
 );

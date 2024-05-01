@@ -35,7 +35,7 @@ router.post('/add', upload.single('avatar'), async (req, res) => {
         avatar: avatar,
         category: category
     }
-    console.log(product);
+    //console.log(product);
 
     await ProductModel.create(product);
     res.redirect('/product');

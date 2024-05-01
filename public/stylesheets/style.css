@@ -12,12 +12,12 @@ body{
   flex: 1;
   height: fill;
   background-color: wheat;
-  font-size: 20px;
+  font-size: 10px;
   font-weight: bold;
 }
 
 .content{
-  flex: 4;
+  flex: 9;
   height: auto;
   background-color: white;
   font-size: 20px;
@@ -88,23 +88,3 @@ input[type="submit"]:focus {
 .error {
   color: red;
 }
-
-table {
-  border-collapse: collapse;
-  vertical-align: top;
-  }
-
-  table.list {
-  width: 100%;
-  }
-
-  table.list tr td {
-  border: 1px solid #999999;
-  }
-
-  table.list tr th {
-  border: 1px solid #0055DD;
-  background: #0055DD;
-  color: white;
-  text-align: left;
-  }

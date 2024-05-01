@@ -1,0 +1,27 @@
+<center><a class="btn btn-primary mb-3" href="/supplier/add">Add new supplier</a></center>
+<table class="list">
+    <tr>
+        <th>Supplier Name</th>
+        <th>Phone Number</th>
+        <th>Email</th>
+        <th>Addess</th>
+        <th>Description</th>
+        <th>Options</th>
+    </tr>
+        {{#each supplierList }}
+    <tr>
+        <td>{{ supplierName }}</td>
+        <td>{{ phone }}</td>
+        <td>{{ email }}</td>
+        <td>{{ address }}</td>
+        <td>{{ description }}</td>
+        <td>
+            <a href="/supplier/edit/{{ _id }}">Edit</a>
+            <br>
+            <a class="btn" href="/supplier/delete/{{ _id }}"
+            onclick="return confirm('Do you want to delete this class ?');">
+            Delete</a>
+        </td>
+    </tr>
+        {{/each}}
+</table>
