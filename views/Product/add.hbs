@@ -22,6 +22,14 @@
         {{/each}}
         </select>
         <br><br>
+
+        <label for="">Supplier</label><br>
+        <select class="form-control" name="supplier" id="">
+        {{#each suppliers }}
+        <option value="{{ _id }}">{{ supplierName }}</option>
+        {{/each}}
+        </select>
+        <br><br>
         
         <input type="submit" value="Add">
     </form>

@@ -1,11 +1,9 @@
 const express = require('express');
 const SupplierModel = require('../models/SupplierModel');
-const CategoryModel = require('../models/CategoryModel');
 const router = express.Router();
-const upload = require('../middleware/upload');
 
 router.get('/', async (req, res) => {
-    let supplierList = await SupplierModel.find({}).populate('category');
+    let supplierList = await SupplierModel.find({});
     res.render('supplier', {supplierList});
 })
 
@@ -15,28 +13,28 @@ router.get('/delete/:id', async (req, res) => {
     res.redirect('/supplier');
 })
 
-router.get('/add', async (req, res) => {
+router.get('/add', async(req, res) => {
     var suppliers = await SupplierModel.find({});
     res.render('supplier/add', { suppliers });
 })
 
-router.post('/add', upload.single('avatar'), async (req, res) => {
+router.post('/add', async (req, res) => {
     var supplier = req.body;
-
-    await supplierModel.create(supplier);
+    console.log(supplier)
+    await SupplierModel.create(supplier);
     res.redirect('/supplier');
 })
 
 router.get('/edit/:id', async (req, res) => {
     var id = req.params.id;
-    var supplier = await supplierModel.findById(id);
+    var supplier = await SupplierModel.findById(id);
     res.render('supplier/edit', { supplier });
 })
 
 router.post('/edit/:id', async (req, res) => {
     var id = req.params.id;
     var supplier = req.body;
-    await supplierModel.findByIdAndUpdate(id,supplier);
+    await SupplierModel.findByIdAndUpdate(id,supplier);
     res.redirect('/supplier');
 })
 

@@ -1,0 +1,22 @@
+<form action="/product/delete/{{product._id}}" method="post">
+    <h1>Are you sure you want to delete this product</h1>
+    <label for="productName">Product Name: {{ product.productName }}</label><br>
+
+    <label name="price">Price: {{ product.price }} </label><br>
+
+    <label for="description">Description: {{ product.description }}</label><br>
+
+    <label for="avatar">Product Image</label><br>
+    <img src="/images/{{ product.avatar }}" width="150" height="150">
+    <br><br>
+
+    <label for="category">Category: {{ product.category }}</label><br>
+
+    </select>
+    <br><br>
+
+    <label for="supplier">Supplier: {{ product.supplier }}</label><br>
+    <br><br>
+    
+    <input type="submit" value="Delete">
+</form>

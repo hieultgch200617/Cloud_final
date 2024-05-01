@@ -1,7 +1,6 @@
 const express = require('express');
 const multer = require('multer');
 const CategoryModel = require('../models/CategoryModel');
-const ProductModel = require('../models/ProductModel');
 const router = express.Router();
 
 router.get('/', async (req, res) => {
