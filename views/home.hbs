@@ -1,12 +1,11 @@
 <h2>All products</h2>
     {{#each productList }}
-        <div class="card" style="width: 16rem;">
+        <div class="card" style="width: 10rem; display:inline-block">
 			<img src="/images/{{ avatar }}" class="card-img-top" alt="...">
 		    <div class="card-body">
 				<h5 class="card-title">{{ productName }}</h5>
 				<p class="card-text"> {{ price }} </p>
-				<a href="/product/detail" class="btn btn-second">Details</a>
+				<a href="/product/detail/{{ _id }}" class="btn btn-second">Details</a>
 			</div>
 	    </div>
     {{/each}}
-</div>

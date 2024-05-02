@@ -1,6 +1,6 @@
 <div class="container text-center col-md-6">
-    <form action="/supplier/edit/{{supplier._id}}" method="post" enctype="multipart/form-data">
-        <h1 class="text text-primary text-uppercase">Add new supplier</h1>
+    <form action="/supplier/edit/{{supplier._id}}" method="post">
+        <h1 class="text text-primary text-uppercase">Edit supplier</h1>
 
         <label for="">Supplier Name</label><br>
         <input type="text" name="supplierName" value="{{ supplier.supplierName }}">
@@ -15,13 +15,13 @@
         <br><br>
 
         <label for="">Address</label><br>
-        <input type="text" name="address" id="address" value="{{ supplier.address }}">
+        <input type="text" name="address" value="{{ supplier.address }}">
         <br><br>
 
         <label for="">Description</label><br>
         <input type="text" name="description" value="{{ supplier.description }}"><br><br>
         <br><br>
         
-        <input type="submit" value="Add">
+        <input type="submit" value="Edit">
     </form>
 </div>

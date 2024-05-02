@@ -21,7 +21,6 @@ body{
   height: auto;
   background-color: white;
   font-size: 20px;
-
 }
 
 ul li{
@@ -87,4 +86,16 @@ input[type="submit"]:focus {
 
 .error {
   color: red;
+}
+
+.card {
+  width: 10rem; /* Set width for each card */
+  display: inline-block; /* Display cards in a row */
+  margin: 10px; /* Add some margin between cards */
+  align-items: center;
+}
+
+.card-img-top {
+  width: 100%; /* Make images fill their parent container */
+  height: auto; /* Maintain aspect ratio */
 }

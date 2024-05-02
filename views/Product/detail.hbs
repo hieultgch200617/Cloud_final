@@ -1,15 +1,14 @@
 <div class="row">
     <div class="col-md-5 text-center">
-        <img src="{{ product.avatar }}"
-        width="300" height="300">
+        <img src="/images/{{ product.avatar}}" width="300" height="300">
         <h3>{{ product.productName }}</h3>
     </div>
     <div class="col-md-7">
         <ul>
             <li>Price: {{ product.price }}</li>
             <li>Description: {{ product.description }}</li>
-            <li>Category: {{ product.category }}</li>
-            <li>Supllier: {{ product.supplier }}</li>
+            <li>Category: {{ product.category.categoryName }}</li>
+            <li>Supllier: {{ product.supplier.supplierName }}</li>
         </ul>
     </div>
 </div>
